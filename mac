@@ -109,6 +109,7 @@ brew "the_silver_searcher"
 brew "tmux"
 brew "vim"
 brew "zsh"
+brew "jq"
 
 # Heroku
 brew "heroku-toolbelt"
@@ -131,6 +132,29 @@ brew "elixir"
 brew "postgres", restart_service: true
 brew "redis", restart_service: true
 EOF
+
+fancy_echo “Installing Brew Cask ..."
+brew_tap 'caskroom/cask'
+brew update
+
+fancy_echo “Installing Casks ..."
+brew cask install google-chrome
+brew cask install alfred
+brew cask install vlc
+brew cask install iterm2
+brew cask install cleanmymac
+brew cask install 1password
+brew cask install sketch
+brew cask install framer-studio
+brew cask install omnifocus
+brew cask install spotify
+brew cask install alfred
+brew cask install dash
+brew cask install karabiner
+brew cask install atom
+brew cask install little-snitch
+brew cask install skype
+brew cask install dropbox
 
 fancy_echo "Configuring Ruby ..."
 find_latest_ruby() {
