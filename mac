@@ -155,6 +155,8 @@ brew cask install atom
 brew cask install little-snitch
 brew cask install skype
 brew cask install dropbox
+brew cask install carbon-copy-cloner
+brew cask install flux
 
 fancy_echo "Configuring Ruby ..."
 find_latest_ruby() {
