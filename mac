@@ -138,6 +138,7 @@ brew_tap 'caskroom/cask'
 brew update
 
 fancy_echo “Installing Casks ..."
+brew cask install postgres
 brew cask install google-chrome
 brew cask install alfred
 brew cask install vlc
