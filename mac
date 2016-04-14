@@ -112,6 +112,7 @@ brew "zsh"
 brew "jq"
 brew "cmake"
 brew "gpg"
+brew "phantomjs"
 
 # Heroku
 brew "heroku-toolbelt"
