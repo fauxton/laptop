@@ -131,33 +131,30 @@ brew "elixir"
 # Databases
 brew "postgres", restart_service: true
 brew "redis", restart_service: true
+
+# Cask
+cask_args appdir: '/Applications'
+tap 'caskroom/cask'
+cask 'google-chrome'
+cask 'alfred'
+cask 'vlc'
+cask 'iterm2'
+cask 'cleanmymac'
+cask '1password'
+cask 'sketch'
+cask 'framer-studio'
+cask 'omnifocus'
+cask 'spotify'
+cask 'alfred'
+cask 'dash'
+cask 'karabiner'
+cask 'atom'
+cask 'little-snitch'
+cask 'skype'
+cask 'dropbox'
+cask 'carbon-copy-cloner'
+cask 'flux'
 EOF
-
-fancy_echo “Installing Brew Cask ..."
-brew_tap 'caskroom/cask'
-brew update
-
-fancy_echo “Installing Casks ..."
-brew cask install postgres
-brew cask install google-chrome
-brew cask install alfred
-brew cask install vlc
-brew cask install iterm2
-brew cask install cleanmymac
-brew cask install 1password
-brew cask install sketch
-brew cask install framer-studio
-brew cask install omnifocus
-brew cask install spotify
-brew cask install alfred
-brew cask install dash
-brew cask install karabiner
-brew cask install atom
-brew cask install little-snitch
-brew cask install skype
-brew cask install dropbox
-brew cask install carbon-copy-cloner
-brew cask install flux
 
 fancy_echo "Configuring Ruby ..."
 find_latest_ruby() {
