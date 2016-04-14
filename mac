@@ -110,6 +110,7 @@ brew "tmux"
 brew "vim"
 brew "zsh"
 brew "jq"
+brew "cmake"
 
 # Heroku
 brew "heroku-toolbelt"
