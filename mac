@@ -159,6 +159,7 @@ cask 'flux'
 cask 'postgres'
 cask 'docker'
 cask 'slack'
+cask 'postgres'
 EOF
 
 fancy_echo "Configuring Ruby ..."
