@@ -129,7 +129,6 @@ brew "ruby-build"
 brew "elixir"
 
 # Databases
-brew "postgres", restart_service: true
 brew "redis", restart_service: true
 
 # Cask
@@ -154,6 +153,7 @@ cask 'skype'
 cask 'dropbox'
 cask 'carbon-copy-cloner'
 cask 'flux'
+cask 'postgres'
 EOF
 
 fancy_echo "Configuring Ruby ..."
