@@ -154,6 +154,7 @@ cask 'dropbox'
 cask 'carbon-copy-cloner'
 cask 'flux'
 cask 'postgres'
+cask 'docker'
 EOF
 
 fancy_echo "Configuring Ruby ..."
