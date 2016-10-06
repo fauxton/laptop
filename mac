@@ -113,6 +113,7 @@ brew "jq"
 brew "cmake"
 brew "gpg"
 brew "phantomjs"
+brew "wget"
 
 # Heroku
 brew "heroku-toolbelt"
