@@ -1,6 +1,8 @@
 os:
   - osx
 
+language: sh
+
 before_script:
   - brew install shellcheck
 
