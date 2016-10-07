@@ -4,7 +4,6 @@ os:
 language: sh
 
 before_install:
-  - rvm implode --force
   - rm -rf ~/.rvm
   - brew update
 
