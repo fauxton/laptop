@@ -1,10 +1,11 @@
-#!/bin/bash
+#!/bin/sh
 
 # Welcome to the thoughtbot laptop script!
 # Be prepared to turn your laptop (or desktop, no haters here)
 # into an awesome development machine.
 
 fancy_echo() {
+  # shellcheck disable=SC2039
   local fmt="$1"; shift
 
   # shellcheck disable=SC2059
@@ -12,7 +13,9 @@ fancy_echo() {
 }
 
 append_to_zshrc() {
+  # shellcheck disable=SC2039
   local text="$1" zshrc
+  # shellcheck disable=SC2039
   local skip_new_line="${2:-0}"
 
   if [ -w "$HOME/.zshrc.local" ]; then
