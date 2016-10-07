@@ -61,13 +61,15 @@ else
   sudo chown -R "$LOGNAME:admin" "$HOMEBREW_PREFIX"
 fi
 
-case "$SHELL" in
-  */zsh) : ;;
-  *)
-    fancy_echo "Changing your shell to zsh ..."
-      chsh -s "$(which zsh)"
-    ;;
-esac
+if ! $TRAVIS; then
+  case "$SHELL" in
+    */zsh) : ;;
+    *)
+      fancy_echo "Changing your shell to zsh ..."
+        chsh -s "$(which zsh)"
+      ;;
+  esac
+fi
 
 gem_install_or_update() {
   if gem list "$1" --installed > /dev/null; then
