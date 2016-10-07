@@ -3,6 +3,9 @@ os:
 
 language: sh
 
+before_install:
+  - brew update
+
 install:
   - brew install shellcheck
 
