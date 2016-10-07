@@ -3,11 +3,15 @@ os:
 
 language: sh
 
-before_script:
+install:
   - brew install shellcheck
 
 script:
+  # TODO: Add actual assertions about expected state
+  # i.e. presence of dotfiles, directories, applications.
   - shellcheck mac install-dotfiles
+  - mac
+  - echo "SUCCESS!"
 
 notifications:
   email: false
