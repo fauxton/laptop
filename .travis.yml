@@ -12,9 +12,7 @@ install:
 script:
   # TODO: Add actual assertions about expected state
   # i.e. presence of dotfiles, directories, applications.
-  - shellcheck mac install-dotfiles
-  - sudo ./mac
-  - echo "SUCCESS!"
+  - shellcheck mac install-dotfiles && ./mac && echo "SUCCESS!"
 
 notifications:
   email: false
