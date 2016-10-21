@@ -187,11 +187,18 @@ if ! $TRAVIS; then
   rbenv global "$ruby_version"
   rbenv shell "$ruby_version"
 fi
+
 gem update --system
 gem_install_or_update 'bundler'
 gem_install_or_update 'maid'
 number_of_cores=$(sysctl -n hw.ncpu)
 bundle config --global jobs $((number_of_cores - 1))
+
+# Install npm packages
+npm install -g yarn
+
+yarn global add ember-cli
+yarn global add hotel
 
 if [ -f "$HOME/.laptop.local" ]; then
   fancy_echo "Running your customizations from ~/.laptop.local ..."
