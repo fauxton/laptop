@@ -15,5 +15,9 @@ script:
   - shellcheck mac install-dotfiles && ./mac
   - . ~/.zshrc && aliases
 
+cache:
+  directories:
+    - $HOME/Library/Caches/Homebrew
+
 notifications:
   email: false
