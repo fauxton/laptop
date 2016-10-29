@@ -13,7 +13,7 @@ script:
   # TODO: Add actual assertions about expected state
   # i.e. presence of dotfiles, directories, applications.
   - shellcheck mac install-dotfiles && ./mac
-  - . $HOME/.zshrc && aliases
+  - source $HOME/.zshrc
 
 cache:
   directories:
