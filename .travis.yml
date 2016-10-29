@@ -14,6 +14,7 @@ script:
   # i.e. presence of dotfiles, directories, applications.
   - shellcheck mac install-dotfiles && ./mac
   - source $HOME/.zshrc
+  - type vlc
 
 cache:
   timeout: 900
