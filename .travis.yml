@@ -16,6 +16,7 @@ script:
   - source $HOME/.zshrc
 
 cache:
+  timeout: 900
   directories:
     - $HOME/Library/Caches/Homebrew
 
