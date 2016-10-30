@@ -17,6 +17,9 @@ brew "gpg"
 brew "phantomjs"
 brew "wget"
 
+# No More App Store
+brew "mas"
+
 # Heroku
 brew "heroku-toolbelt"
 brew "parity"
