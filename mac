@@ -76,13 +76,11 @@ update_shell() {
 if ! $TRAVIS; then
   case "$SHELL" in
     */zsh)
-      if [ "$(which zsh)" != '/bin/zsh' ] ; then
+    if [ "$(which zsh)" != '/usr/local/bin/zsh' ] ; then
         update_shell
       fi
       ;;
     *)
-      update_shell
-      ;;
   esac
 fi
 
