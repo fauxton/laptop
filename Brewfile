@@ -33,10 +33,8 @@ brew "hub"
 brew "imagemagick"
 
 # Programming languages
+brew "coreutils"
 brew "libyaml" # should come after openssl
-brew "node"
-brew "rbenv"
-brew "ruby-build"
 brew "elixir"
 
 # Databases
@@ -46,6 +44,7 @@ brew "redis", restart_service: true
 cask_args appdir: '/Applications'
 tap 'caskroom/cask'
 cask 'google-chrome'
+cask 'gpg-tools'
 cask 'alfred'
 cask 'vlc'
 cask 'iterm2'
