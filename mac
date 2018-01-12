@@ -114,7 +114,7 @@ if brew list | grep -Fq brew-cask; then
 fi
 
 fancy_echo "Updating Homebrew formulae ..."
-brew update
+brew update --force
 brew bundle
 
 if ! $TRAVIS; then
