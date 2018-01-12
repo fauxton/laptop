@@ -44,7 +44,7 @@ brew "redis", restart_service: true
 cask_args appdir: '/Applications'
 tap 'caskroom/cask'
 cask 'google-chrome'
-cask 'gpg-tools'
+cask 'gpg-suite'
 cask 'alfred'
 cask 'vlc'
 cask 'iterm2'
