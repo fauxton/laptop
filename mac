@@ -176,8 +176,6 @@ fancy_echo "Installing latest Golang..."
 install_asdf_language "golang"
 
 # Install npm packages
-npm install -g yarn
-
 npm i -g ember-cli
 npm i -g hotel
 
