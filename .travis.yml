@@ -12,7 +12,7 @@ install:
 script:
   # TODO: Add actual assertions about expected state
   # i.e. presence of dotfiles, directories, applications.
-  - shellcheck mac install-dotfiles && ./mac
+  - shellcheck -e SC2039 mac install-dotfiles && ./mac
   - source $HOME/.zshrc
   - type vlc
 
