@@ -86,6 +86,16 @@ if ! $TRAVIS; then
   esac
 fi
 
+install_system_dependencies() {
+  # Avoid the system dialog so install remains hands off
+  # Hat tip to https://sector7g.be/posts/installing-xcode-command-line-tools-through-terminal-without-any-user-interaction
+  fancy_echo "Installing XCode Command Line Tools"
+  touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
+  sudo softwareupdate -i -a
+}
+
+install_system_dependencies
+
 gem_install_or_update() {
   if gem list "$1" --installed > /dev/null; then
     gem update "$@"
