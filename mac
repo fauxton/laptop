@@ -89,9 +89,11 @@ fi
 install_system_dependencies() {
   # Avoid the system dialog so install remains hands off
   # Hat tip to https://sector7g.be/posts/installing-xcode-command-line-tools-through-terminal-without-any-user-interaction
-  fancy_echo "Installing XCode Command Line Tools"
-  touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
-  sudo softwareupdate -i -a
+  if ! $TRAVIS; then
+    fancy_echo "Installing XCode Command Line Tools"
+    touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
+    sudo softwareupdate -i -a
+  fi
 }
 
 install_system_dependencies
