@@ -13,9 +13,5 @@ git clone "https://github.com/$DOTFILES_REPO.git" "$DOTFILES_DIR"
 # Set zsh as shell (as part of installation instructions)
 chsh -s "$(which zsh)"
 
-# Install rcm
-brew tap thoughtbot/formulae
-brew install rcm
-
 # Link dotfiles
 env RCRC="$DOTFILES_DIR/rcrc" rcup
