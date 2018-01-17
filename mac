@@ -131,12 +131,10 @@ fancy_echo "Updating Homebrew formulae ..."
 brew update --force
 brew bundle
 
-if ! $TRAVIS; then
-  fancy_echo "Configuring asdf version manager..."
-  if [ ! -d "$HOME/.asdf" ]; then
-    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.4.1
-    append_to_zshrc "source $HOME/.asdf/asdf.sh" 1
-  fi
+fancy_echo "Configuring asdf version manager..."
+if [ ! -d "$HOME/.asdf" ]; then
+  git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.4.1
+  append_to_zshrc "source $HOME/.asdf/asdf.sh" 1
 fi
 
 install_asdf_plugin() {
