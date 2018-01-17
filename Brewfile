@@ -16,7 +16,6 @@ brew "zsh"
 brew "jq"
 brew "cmake"
 brew "gpg"
-brew "phantomjs"
 brew "wget"
 
 # No More App Store
