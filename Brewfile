@@ -38,7 +38,7 @@ brew "libyaml" # should come after openssl
 # Databases
 brew "redis", restart_service: true
 
-# Cask
+# Casks
 cask_args appdir: '/Applications'
 tap 'caskroom/cask'
 cask 'google-chrome'
