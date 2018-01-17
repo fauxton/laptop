@@ -34,7 +34,6 @@ brew "imagemagick"
 # Programming languages
 brew "coreutils"
 brew "libyaml" # should come after openssl
-brew "elixir"
 
 # Databases
 brew "redis", restart_service: true
