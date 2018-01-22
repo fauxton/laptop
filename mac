@@ -196,3 +196,8 @@ if [ -f "install-dotfiles" ]; then
   fancy_echo "Installing dotfiles"
   ./install-dotfiles
 fi
+
+# Save screenshots in custom location
+SCREENSHOTS_FOLDER="$HOME/Pictures/Screenshots"
+mkdir "$SCREENSHOTS_FOLDER"
+defaults write com.apple.screencapture location "$SCREENSHOTS_FOLDER"
