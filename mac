@@ -150,6 +150,7 @@ source "$HOME/.asdf/asdf.sh"
 install_asdf_plugin "ruby" "https://github.com/asdf-vm/asdf-ruby.git"
 install_asdf_plugin "golang" "https://github.com/kennyp/asdf-golang"
 install_asdf_plugin "nodejs" "https://github.com/asdf-vm/asdf-nodejs.git"
+install_asdf_plugin "erlang" "https://github.com/asdf-vm/asdf-erlang.git"
 install_asdf_plugin "elixir" "https://github.com/asdf-vm/asdf-elixir.git"
 
 install_asdf_language() {
@@ -178,6 +179,7 @@ fancy_echo "Installing latest Golang..."
 install_asdf_language "golang"
 
 fancy_echo "Installing latest Elixir..."
+install_asdf_language "erlang"
 install_asdf_language "elixir"
 
 # Install npm packages
