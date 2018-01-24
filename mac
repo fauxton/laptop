@@ -201,3 +201,9 @@ fi
 SCREENSHOTS_FOLDER="$HOME/Pictures/Screenshots"
 mkdir "$SCREENSHOTS_FOLDER"
 defaults write com.apple.screencapture location "$SCREENSHOTS_FOLDER"
+
+# Enable Full Disk Encryption
+sudo fdesetup enable
+# TODO: Persist encryption key for later access
+
+
