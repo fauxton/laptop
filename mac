@@ -217,3 +217,8 @@ sudo launchctl unload /System/Library/LaunchDaemons/com.apple.alf.agent.plist
 # load alf
 sudo launchctl load /System/Library/LaunchDaemons/com.apple.alf.agent.plist
 sudo launchctl load /System/Library/LaunchDaemons/com.apple.alf.useragent.plist
+
+# Make dock appear faster
+defaults write com.apple.dock autohide-delay -float 0;
+defaults write com.apple.dock autohide-time-modifier -float 0.5;
+killall Dock
