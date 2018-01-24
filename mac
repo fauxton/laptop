@@ -206,4 +206,14 @@ defaults write com.apple.screencapture location "$SCREENSHOTS_FOLDER"
 sudo fdesetup enable
 # TODO: Persist encryption key for later access
 
+# Enable Firewall
+# from https://github.com/justinrummel/Random-Scripts/blob/master/JAMF/enable_firewall.sh
+sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
 
+# unload alf
+sudo launchctl unload /System/Library/LaunchDaemons/com.apple.alf.useragent.plist
+sudo launchctl unload /System/Library/LaunchDaemons/com.apple.alf.agent.plist
+
+# load alf
+sudo launchctl load /System/Library/LaunchDaemons/com.apple.alf.agent.plist
+sudo launchctl load /System/Library/LaunchDaemons/com.apple.alf.useragent.plist
